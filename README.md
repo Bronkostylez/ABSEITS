@@ -6,7 +6,7 @@ You are the captain of SV Dorfkante, playing against Real Betonmischer. The matc
 
 ![A whistle: the referee stops the game and you have a few seconds to talk to him](docs/pfiff.svg)
 
-![A goal](docs/tor.svg)
+![The goal animation, triggered by hand for this screenshot](docs/tor.svg)
 
 ## How a match works
 
