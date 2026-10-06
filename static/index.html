@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ABSEITS</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<div id="app">
+  <header id="top">
+    <div class="brand"><span id="title">ABSEITS</span><small>Der Schiri macht die Regeln</small></div>
+    <div id="scoreboard">
+      <div class="team home"><i class="dot"></i><span id="homeName">Heim</span></div>
+      <div class="score"><b id="scoreHome">0</b><span>:</span><b id="scoreAway">0</b></div>
+      <div class="team away"><span id="awayName">Gast</span><i class="dot"></i></div>
+      <div class="clock"><span id="clock">0'</span><small id="halfLabel">1. Halbzeit</small></div>
+    </div>
+    <div class="top-right">
+      <span id="llmBadge" class="badge">...</span>
+      <button id="soundBtn" class="ghost" title="Ton an/aus">Ton: aus</button>
+    </div>
+  </header>
+
+  <aside id="left">
+    <section class="card ref-card">
+      <div class="ref-avatar"><svg viewBox="0 0 60 60"><circle cx="30" cy="30" r="26" fill="#ffe14d" stroke="#111" stroke-width="3"/><rect x="12" y="24" width="36" height="8" rx="3" fill="#111"/><circle cx="22" cy="28" r="3" fill="#ffe14d"/><circle cx="38" cy="28" r="3" fill="#ffe14d"/><path d="M20 42 Q30 48 40 42" stroke="#111" stroke-width="3" fill="none"/></svg></div>
+      <div>
+        <div class="label">Schiedsrichter</div>
+        <div id="refName" class="ref-name">-</div>
+        <div id="refQuirk" class="quirk"></div>
+      </div>
+    </section>
+    <section class="card meters">
+      <div class="meter" id="m-patience"><label>Geduld</label><div class="bar"><i></i></div></div>
+      <div class="meter" id="m-mood"><label>Laune</label><div class="bar"><i></i></div></div>
+      <div class="meter" id="m-suspicion"><label>Misstrauen</label><div class="bar"><i></i></div></div>
+      <div class="meter" id="m-crowd"><label>Stimmung im Stadion</label><div class="bar"><i></i></div></div>
+    </section>
+    <section class="card money">
+      <div class="label">Schmiergeld</div>
+      <div class="money-val"><span id="money">0</span> €</div>
+      <div class="stats" id="stats"></div>
+    </section>
+  </aside>
+
+  <main id="stage">
+    <canvas id="pitch"></canvas>
+    <div id="bubble" class="bubble hidden"></div>
+    <div id="incident" class="incident hidden">
+      <div class="inc-tag" id="incTag">PFIFF</div>
+      <div class="inc-text" id="incText"></div>
+      <div class="inc-bar"><i id="incBar"></i></div>
+    </div>
+    <div id="bigBanner" class="big-banner hidden"></div>
+    <div id="cardFlash" class="card-flash hidden"><div class="the-card"></div><div class="card-who"></div></div>
+    <div id="endOverlay" class="end hidden">
+      <div class="end-box">
+        <div class="end-title">Abpfiff</div>
+        <div class="end-score" id="endScore"></div>
+        <div class="end-lines" id="endLines"></div>
+        <button id="newGame" class="primary">Neues Spiel</button>
+      </div>
+    </div>
+  </main>
+
+  <aside id="right">
+    <section class="card rulebook">
+      <div class="rb-head"><span>Regelbuch</span><small id="ruleCount">0</small></div>
+      <div id="rules" class="rules"></div>
+    </section>
+  </aside>
+
+  <footer id="bottom">
+    <div id="ticker" class="ticker"></div>
+    <div class="dock">
+      <div class="say-row">
+        <input id="sayInput" type="text" maxlength="160" placeholder="Sag dem Schiri was ... (Enter zum Senden)" autocomplete="off">
+        <div class="chips" id="chips">
+          <button data-amt="20">20 €</button><button data-amt="50" class="on">50 €</button>
+          <button data-amt="100">100 €</button><button data-amt="250">250 €</button>
+        </div>
+      </div>
+      <div class="actions" id="actions">
+        <button data-act="protest" class="act a-protest"><b>Protestieren</b><small>Das war nie ein Foul!</small></button>
+        <button data-act="bribe" class="act a-bribe"><b>Bestechen</b><small>Umschlag zustecken</small></button>
+        <button data-act="flatter" class="act a-flatter"><b>Schmeicheln</b><small>Lob für den Schiri</small></button>
+        <button data-act="insult" class="act a-insult"><b>Anpöbeln</b><small>Riskant</small></button>
+        <button data-act="rule" class="act a-rule"><b>Regel vorschlagen</b><small>Dein Text oben</small></button>
+        <button data-act="dive" class="act a-dive"><b>Schwalbe</b><small>Fallen lassen</small></button>
+      </div>
+    </div>
+  </footer>
+</div>
+<script src="/static/game.js"></script>
+</body>
+</html>
