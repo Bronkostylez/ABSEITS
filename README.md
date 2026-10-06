@@ -4,6 +4,10 @@ Football, but the referee is an AI and makes up the rules as he goes.
 
 You are the captain of SV Dorfkante, playing against Real Betonmischer. The match runs on its own and you watch it from above in your browser. When the referee blows the whistle, you have a few seconds to talk him into something. You can protest, bribe him, flatter him, insult him, or suggest a rule. He decides fresh every time, and sometimes he invents a rule that really applies from then on: goals count double, the ball gets huge, a team freezes, the sides switch.
 
+![A whistle: the referee stops the game and you have a few seconds to talk to him](docs/pfiff.svg)
+
+![A goal](docs/tor.svg)
+
 ## How a match works
 
 A match lasts 90 game minutes, which is about six minutes in real time without interruptions. The referee whistles for fouls, handballs, brawls, a streaker, and every goal. Then the game stops:
